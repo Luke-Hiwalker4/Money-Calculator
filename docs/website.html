@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<HTML>
+   <head>
+      <h1>
+      Money calculator</h>
+      <br>
+   </head>
 
+   <body>
+      <label for="USD" style="color:green;font-size:28px;"> USD </label>
+      <input type="number" id="USD" min="0" stap="0.01" value="0" onchange="usdfunc()"/>
+      </br>
+      <label for="EUR" style="color:green;font-size:28px;"> EUR </label>
+      <input type="number" id="EUR" min="0" stap="0.01" value="0" onchange="eurfunc()"/>
+
+      <script type="text/javascript">
+         var usd;
+         var eur;
+         
+         function eurfunc()
+         {
+             usd.value = eur.value * 1.2210;
+         }
+         
+         function usdfunc()
+         {
+             eur.value = usd.value * 0.8191;
+         }
+         
+         usd = document.getElementById("USD");
+         eur = document.getElementById("EUR");
+      </script>
+   </body>
+</HTML>
